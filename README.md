@@ -1,4 +1,4 @@
-in index page it when the application is run it shows the student details name of student,parent name,opted courses,enable or disable  column parent name is fetched by the relation of parent table name of the courses fetched from the relation opted_course_table 
+in index page  when the application is run it shows the student details name of student,parent name,opted courses,enable or disable  column parent name is fetched by the relation of parent table name of the courses fetched from the relation opted_course_table 
 ![Screenshot 2024-06-29 122856](https://github.com/amalanto1611/test_laravel_student/assets/145443897/a88452e3-4f58-4d5f-802d-fef94d1a2c3d)
 by clicking the toggle button we can enable disable at that time databse value is_active will toggle 1,0 by using ajax 
 ![Screenshot 2024-06-29 122922](https://github.com/amalanto1611/test_laravel_student/assets/145443897/40aaa021-7798-4982-9673-8e62656ed276)

@@ -2,9 +2,8 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB; // Import the DB facade
+use Illuminate\Support\Facades\DB;
 
 class CourseSeeder extends Seeder
 {
@@ -13,11 +12,14 @@ class CourseSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('tbl_course')->insert([
-            ['course_name' => 'English', 'dept' => 'English'],
-            ['course_name' => 'Mathematics', 'dept' => 'Maths'],
-            ['course_name' => 'Science', 'dept' => 'Science'],
-            ['course_name' => 'Economics', 'dept' => 'Science'],
-        ]);
+        $courses = [
+            ['id' => 1, 'course_name' => 'English',  'dept' => 'English'],
+            ['id' => 2, 'course_name' => 'Mathematics',  'dept' => 'Maths'],
+            ['id' => 3, 'course_name' => 'Science',  'dept' => 'Science'],
+            ['id' => 4, 'course_name' => 'Economics', 'dept' => 'Science'],
+        ];
+
+        // Insert the courses into the tbl_course table
+        DB::table('tbl_course')->insert($courses);
     }
 }

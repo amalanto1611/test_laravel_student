@@ -2,9 +2,8 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB; // Import the DB facade
+use Illuminate\Support\Facades\DB;
 
 class ParentSeeder extends Seeder
 {
@@ -13,12 +12,15 @@ class ParentSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('tbl_parent')->insert([
-            ['name' => 'John', 'email' => 'john@gmail.com'],
-            ['name' => 'Tom', 'email' => 'tom2@gmail.com'],
-            ['name' => 'Joy', 'email' => 'bin@jon.com'],
-            ['name' => 'Adam', 'email' => 'adam@yahoo.com'],
-            ['name' => 'Dennis', 'email' => 'den@gmail.com'],
-        ]);
+        $parents = [
+            ['id' => 1, 'name' => 'John', 'email' => 'john@gmail.com'],
+            ['id' => 2, 'name' => 'Tom', 'email' => 'tom2@gmail.com'],
+            ['id' => 3, 'name' => 'Joy', 'email' => 'bin@jon.com'],
+            ['id' => 4, 'name' => 'Adam', 'email' => 'adam@yahoo.com'],
+            ['id' => 5, 'name' => 'Dennis', 'email' => 'den@gmail.com'],
+        ];
+
+        // Insert the parents into the tbl_parent table
+        DB::table('tbl_parent')->insert($parents);
     }
 }

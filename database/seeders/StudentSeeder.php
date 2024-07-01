@@ -2,9 +2,8 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB; // Import the DB facade
+use Illuminate\Support\Facades\DB;
 
 class StudentSeeder extends Seeder
 {
@@ -13,14 +12,17 @@ class StudentSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('tbl_student')->insert([
-            ['name' => 'Anju', 'fk_parent_id' => 1, 'gender' => 'F'],
-            ['name' => 'Alex', 'fk_parent_id' => 2, 'gender' => 'M'],
-            ['name' => 'Rols', 'fk_parent_id' => 2, 'gender' => 'M'],
-            ['name' => 'David', 'fk_parent_id' => 3, 'gender' => 'M'],
-            ['name' => 'Abi', 'fk_parent_id' => 4, 'gender' => 'F'],
-            ['name' => 'Jinu', 'fk_parent_id' => 5, 'gender' => 'F'],
-            ['name' => 'Aju', 'fk_parent_id' => 5, 'gender' => 'M'],
-        ]);
+        $students = [
+            ['id' => 1, 'name' => 'Anju', 'fk_parent_id' => 1, 'gender' => 'F'],
+            ['id' => 2, 'name' => 'Alex', 'fk_parent_id' => 2, 'gender' => 'M'],
+            ['id' => 3, 'name' => 'Rols', 'fk_parent_id' => 2, 'gender' => 'M'],
+            ['id' => 4, 'name' => 'David', 'fk_parent_id' => 3, 'gender' => 'M'],
+            ['id' => 5, 'name' => 'Abi', 'fk_parent_id' => 4, 'gender' => 'M'],
+            ['id' => 6, 'name' => 'Jinu', 'fk_parent_id' => 5, 'gender' => 'F'],
+            ['id' => 7, 'name' => 'Aju', 'fk_parent_id' => 5, 'gender' => 'M'],
+        ];
+
+        // Insert the students into the tbl_student table
+        DB::table('tbl_student')->insert($students);
     }
 }
